@@ -35,10 +35,13 @@ public class Driver extends Application{
 				driver.printVector(data[x], weights, result, error, weightedSum, adjustedWeights);
 				weights = adjustedWeights;
 			}
+			m = -weights[1]/weights[0];
+			b = Perceptron.THRESHOLD/weights[0];
+			System.out.println("\ny = "+String.format("%.2f", m)+"x + "+String.format("%.2f", b));
 		}
-		m = -weights[1]/weights[0];
-		b = Perceptron.THRESHOLD/weights[0];
-		System.out.println("\ny = "+String.format("%.2f", m)+"x "+String.format("%.2f", b));
+		//m = -weights[1]/weights[0];
+		//b = Perceptron.THRESHOLD/weights[0];
+		//System.out.println("\ny = "+String.format("%.2f", m)+"x "+String.format("%.2f", b));
 		launch(args);
 	}
 
